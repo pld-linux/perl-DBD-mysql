@@ -15,7 +15,8 @@ BuildRequires:	mysql-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-MySQL for Perl is the driver code that enables Perl to access MySQL databases via the DBI module.
+MySQL for Perl is the driver code that enables Perl to access MySQL
+databases via the DBI module.
 
 %description -l pl
 Sterownik pozwalaj±cy na dostêp do baz MySQL z poziomu Perla.
