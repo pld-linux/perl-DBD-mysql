@@ -4,8 +4,8 @@
 Summary:	DBD::mysql perl module
 Summary(pl):	Modu³ perla DBD::mysql
 Name:		perl-DBD-mysql
-Version:	2.1011
-Release:	2
+Version:	2.1017
+Release:	1
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
