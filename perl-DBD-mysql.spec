@@ -30,6 +30,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 BuildRequires:	perl-DBI >= 1.13
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	mysql-devel
+Obsoletes:	perl-DBD-Mysql
 Obsoletes:	perl-Msql-Mysql-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
