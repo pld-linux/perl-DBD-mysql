@@ -14,7 +14,7 @@ Summary(fr):	Interface MySQL pour Perl
 Summary(it):	Interfaccia MySQL per Perl
 Summary(ja):	Perl ㅞ MySQL ⅳτ�에샵樂㎘ㄵ�
 Summary(ko):	펄을 위한 MySQL 인터페이스
-Summary(no):	Et MySQL-grensesnitt for Perl
+Summary(nb):	Et MySQL-grensesnitt for Perl
 Summary(pl):	DBD::mysql - perlowy interfejs do MySQL-a
 Summary(pt):	Uma interface de Perl para o MySQL
 Summary(pt_BR):	Uma interface de Perl para o MySQL
@@ -73,7 +73,7 @@ MySQL 錮 DBI 셋증
 %description -l ko
 MySQL을 위한 DBI의 실현.
 
-%description -l no
+%description -l nb
 En implementasjon av DBI for MySQL.
 
 %description -l pl
