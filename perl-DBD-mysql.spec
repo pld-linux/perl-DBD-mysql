@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	DBD
-%define	pnam	mysql
+%define		pdir	DBD
+%define		pnam	mysql
 Summary:	An implementation of DBI for MySQL
 Summary(cs):	MySQL rozhraní pro Perl
 Summary(da):	En MySQL-grænseflade for Perl
@@ -19,13 +19,14 @@ Summary(uk):	Perl-¦ÎÔÅÒÆÅÊÓ ÄÏ MySQL
 Summary(zh_CN):	Perl µÄ MySQL ½çÃæ¡£
 Name:		perl-DBD-mysql
 Version:	2.1017
-Release:	2
+Release:	3
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl-DBI >= 1.13
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	mysql-devel
+Obsoletes:	perl-Msql-Mysql-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
