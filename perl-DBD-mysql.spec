@@ -32,7 +32,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 # Source0-md5:	5506f687ff764013cacd7947b1169010
 BuildRequires:	mysql-devel
 BuildRequires:	perl-DBI >= 1.13
-BuildRequires:	perl-devel >= 5.8.0
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 Obsoletes:	perl-DBD-Mysql
 Obsoletes:	perl-Msql-Mysql-modules
