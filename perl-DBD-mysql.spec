@@ -25,11 +25,11 @@ Summary(uk):	Perl-¶Œ‘≈“∆≈ ” ƒœ MySQL
 Summary(zh_CN):	Perl µƒ MySQL ΩÁ√Ê°£
 Name:		perl-DBD-mysql
 Version:	2.9004
-Release:	1
+Release:	2
 # note: libmysqlclient infects everything that links against it with GPL
 License:	GPL (perl code also Artistic)
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/DBD/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	fe3e8c65718368a3fa653e592f82248b
 URL:		http://search.cpan.org/dist/DBD-mysql/
 BuildRequires:	mysql-devel
