@@ -1,3 +1,7 @@
+#
+# Conditional build:
+# _with_tests - perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	DBD
 %define		pnam	mysql
@@ -18,8 +22,8 @@ Summary(sv):	Ett grДnssnitt till MySQL fЖr Perl
 Summary(uk):	Perl-╕нтерфейс до MySQL
 Summary(zh_CN):	Perl ╣д MySQL ╫ГцФ║ё
 Name:		perl-DBD-mysql
-Version:	2.1017
-Release:	4
+Version:	2.1019
+Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -109,8 +113,10 @@ M(y)sql.pm та DBD::mSQL(mysql) реал╕зують два р╕зних п╕дходи до
 
 %build
 perl Makefile.PL
-
 %{__make} OPTIMIZE="%{rpmcflags}"
+
+# tests require access to a working mysql
+%{?_with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
