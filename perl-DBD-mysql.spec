@@ -1,6 +1,6 @@
 #
 # Conditional build:
-# _with_tests - perform "make test"
+%bcond_with	tests	# perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	DBD
@@ -15,7 +15,7 @@ Summary(it):	Interfaccia MySQL per Perl
 Summary(ja):	Perl ╓н MySQL ╔╓╔С╔©║╪╔у╔╖╔╓╔╧
 Summary(ko):	фчю╩ ю╖гя MySQL юнемфДюл╫╨
 Summary(no):	Et MySQL-grensesnitt for Perl
-Summary(pl):	ModuЁ Perla DBD::mysql
+Summary(pl):	DBD::mysql - perlowy interfejs do MySQL-a
 Summary(pt):	Uma interface de Perl para o MySQL
 Summary(pt_BR):	Uma interface de Perl para o MySQL
 Summary(ru):	Интерфейс MySQL для Perl
@@ -23,15 +23,16 @@ Summary(sv):	Ett grДnssnitt till MySQL fЖr Perl
 Summary(uk):	Perl-╕нтерфейс до MySQL
 Summary(zh_CN):	Perl ╣д MySQL ╫ГцФ║ё
 Name:		perl-DBD-mysql
-Version:	2.9002
+Version:	2.9003
 Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	fd2c09b43b641f9f3fd2a840f00c0ac3
-BuildRequires:	perl-DBI >= 1.13
-BuildRequires:	rpm-perlprov >= 4.1-13
+# Source0-md5:	5506f687ff764013cacd7947b1169010
 BuildRequires:	mysql-devel
+BuildRequires:	perl-DBI >= 1.13
+BuildRequires:	perl-devel >= 5.8.0
+BuildRequires:	rpm-perlprov >= 4.1-13
 Obsoletes:	perl-DBD-Mysql
 Obsoletes:	perl-Msql-Mysql-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -123,20 +124,23 @@ M(y)sql.pm та DBD::mSQL(mysql) реал╕зують два р╕зних п╕дходи до
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 # tests require access to a working mysql
-%{?_with_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog README
+%doc ChangeLog README TODO
 %{perl_vendorarch}/DBD/mysql.pm
+%dir %{perl_vendorarch}/DBD/mysql
+%{perl_vendorarch}/DBD/mysql/GetInfo.pm
 %{perl_vendorarch}/Mysql
 %{perl_vendorarch}/Mysql.pm
 %dir %{perl_vendorarch}/auto/DBD/mysql
