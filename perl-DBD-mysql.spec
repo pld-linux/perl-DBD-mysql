@@ -4,8 +4,8 @@
 			# tests require access to a working MySQL
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	DBD
-%define	pnam	mysql
+%define		pdir	DBD
+%define		pnam	mysql
 Summary:	A MySQL interface for Perl
 Summary(cs):	MySQL rozhraní pro Perl
 Summary(da):	En MySQL-grænseflade for Perl
