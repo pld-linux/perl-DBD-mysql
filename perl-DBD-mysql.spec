@@ -5,7 +5,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	DBD
 %define		pnam	mysql
-Summary:	An implementation of DBI for MySQL
+Summary:	A MySQL interface for Perl
 Summary(cs):	MySQL rozhraní pro Perl
 Summary(da):	En MySQL-grænseflade for Perl
 Summary(de):	Ein MySQL Interface für Perl
@@ -17,6 +17,7 @@ Summary(ko):	ÆŞÀ» À§ÇÑ MySQL ÀÎÅÍÆäÀÌ½º
 Summary(no):	Et MySQL-grensesnitt for Perl
 Summary(pl):	Modu³ Perla DBD::mysql
 Summary(pt):	Uma interface de Perl para o MySQL
+Summary(pt_BR):	Uma interface de Perl para o MySQL
 Summary(ru):	éÎÔÅÒÆÅÊÓ MySQL ÄÌÑ Perl
 Summary(sv):	Ett gränssnitt till MySQL för Perl
 Summary(uk):	Perl-¦ÎÔÅÒÆÅÊÓ ÄÏ MySQL
@@ -77,6 +78,9 @@ En implementasjon av DBI for MySQL.
 Sterownik pozwalaj±cy na dostêp do baz MySQL z poziomu Perla.
 
 %description -l pt
+Uma implementação de DBI para o MySQL.
+
+%description -l pt_BR
 Uma implementação de DBI para o MySQL.
 
 %description -l ru
