@@ -22,8 +22,8 @@ Summary(sv):	Ett gränssnitt till MySQL för Perl
 Summary(uk):	Perl-¦ÎÔÅÒÆÅÊÓ ÄÏ MySQL
 Summary(zh_CN):	Perl µÄ MySQL ½çÃæ¡£
 Name:		perl-DBD-mysql
-Version:	2.1025
-Release:	2
+Version:	2.1026
+Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
