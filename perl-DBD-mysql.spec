@@ -1,13 +1,25 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	DBD
 %define	pnam	mysql
-Summary:	DBD::mysql perl module
-Summary(pl):	ModuЁ perla DBD::mysql
-Summary(ru):	Perl-интерфейс к Mysql
-Summary(uk):	Perl-╕нтерфейс до Mysql
+Summary:	An implementation of DBI for MySQL
+Summary(cs):	MySQL rozhranМ pro Perl
+Summary(da):	En MySQL-grФnseflade for Perl
+Summary(de):	Ein MySQL Interface fЭr Perl
+Summary(es):	Interfaz MySQL para Perl
+Summary(fr):	Interface MySQL pour Perl
+Summary(it):	Interfaccia MySQL per Perl
+Summary(ja):	Perl ╓н MySQL ╔╓╔С╔©║╪╔у╔╖╔╓╔╧
+Summary(ko):	фчю╩ ю╖гя MySQL юнемфДюл╫╨
+Summary(no):	Et MySQL-grensesnitt for Perl
+Summary(pl):	ModuЁ Perla DBD::mysql
+Summary(pt):	Uma interface de Perl para o MySQL
+Summary(ru):	Интерфейс MySQL для Perl
+Summary(sv):	Ett grДnssnitt till MySQL fЖr Perl
+Summary(uk):	Perl-╕нтерфейс до MySQL
+Summary(zh_CN):	Perl ╣д MySQL ╫ГцФ║ё
 Name:		perl-DBD-mysql
 Version:	2.1017
-Release:	1
+Release:	2
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -28,14 +40,38 @@ draft of the DBI specification. As they have been circulating longer
 they are more mature and pretty stable. They're also more complete
 than DBD::mSQL and DBD::mysql.
 
-As of Msql-Mysql-modules 1.1815, we consider DBD::mSQL and DBD::mysql
-superior over MsqlPerl and MysqlPerl: They are sufficiently stable
-(there's only one known problem in DBI itself and it's announced to be
-fixed in DBI 0.92) and definitely faster. Anyways, you have to decide
-on your own about the trade-offs.
+%description -l cs
+Implementace DBI pro MySQL do Perlu.
+
+%description -l da
+En implementation af DBI for MySQL.
+
+%description -l de
+Eine Implementierung von DBI fЭr MySQL.
+
+%description -l es
+ImplementaciСn del DBI para MySQL.
+
+%description -l fr
+Mise en oeuvre de DBI pour MySQL.
+
+%description -l it
+Implementazione di DBI per MySQL.
+
+%description -l ja
+MySQL мя DBI ╪баУ
+
+%description -l ko
+MySQLю╩ ю╖гя DBIюг ╫ггЖ.
+
+%description -l no
+En implementasjon av DBI for MySQL.
 
 %description -l pl
 Sterownik pozwalaj╠cy na dostЙp do baz MySQL z poziomu Perla.
+
+%description -l pt
+Uma implementaГЦo de DBI para o MySQL.
 
 %description -l ru
 M(y)sql.pm и DBD::mSQL(mysql) реализуют два разных подхода к общению с
@@ -49,11 +85,8 @@ M(y)sql.pm и DBD::mSQL(mysql) реализуют два разных подхода к общению с
 они более отлажены и стабильны. Также они более завершенные, чем
 DBD::mSQL и DBD::mysql.
 
-На момент версии модулей Msql/Mysql 1.1815 мы считаем DBD::mSQL и
-DBD::mysql лучшим выбором, чем MsqlPerl и MysqlPerl. Они достаточно
-стабильны (известна только одна проблема в собственно DBI и объявлено
-что она будет исправлена в DBI 0.92) и быстрее, чем их Perl'овские
-собратья. Тем не менее, выбор за вами.
+%description -l sv
+En implementation av DBI fЖr MySQL.
 
 %description -l uk
 M(y)sql.pm та DBD::mSQL(mysql) реал╕зують два р╕зних п╕дходи до
@@ -67,11 +100,8 @@ M(y)sql.pm та DBD::mSQL(mysql) реал╕зують два р╕зних п╕дходи до
 довше, вони б╕льш в╕длагоджен╕ та стаб╕льн╕. Також вони б╕льш
 завершен╕, н╕ж DBD::mSQL та DBD::mysql.
 
-На момент верс╕╖ модул╕в Msql/Mysql 1.1815 ми вважа╓мо DBD::mSQL та
-DBD::mysql кращими за MsqlPerl та MysqlPerl. Вони достатньо стаб╕льн╕
-(в╕дома т╕льки одна проблема у власне DBI ╕ заявлено, що вона буде
-виправлена в DBI 0.92) ╕ швидше за ╖х Perl'╕вських брат╕в. Проте,
-виб╕р за вами.
+%description -l zh_CN
+р╩жж MySQL ╣д DBI й╣й╘╢Кй╘║ё
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -86,14 +116,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf ChangeLog README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc ChangeLog README
 %{perl_sitearch}/DBD/mysql.pm
 %{perl_sitearch}/Mysql
 %{perl_sitearch}/Mysql.pm
