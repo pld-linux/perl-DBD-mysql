@@ -23,12 +23,12 @@ Summary(uk):	Perl-╕нтерфейс до MySQL
 Summary(zh_CN):	Perl ╣д MySQL ╫ГцФ║ё
 Name:		perl-DBD-mysql
 Version:	2.1025
-Release:	1
+Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl-DBI >= 1.13
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	mysql-devel
 Obsoletes:	perl-Msql-Mysql-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -112,7 +112,8 @@ M(y)sql.pm та DBD::mSQL(mysql) реал╕зують два р╕зних п╕дходи до
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 # tests require access to a working mysql
@@ -129,10 +130,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog README
-%{perl_sitearch}/DBD/mysql.pm
-%{perl_sitearch}/Mysql
-%{perl_sitearch}/Mysql.pm
-%dir %{perl_sitearch}/auto/DBD/mysql
-%{perl_sitearch}/auto/DBD/mysql/mysql.bs
-%attr(755,root,root) %{perl_sitearch}/auto/DBD/mysql/mysql.so
+%{perl_vendorarch}/DBD/mysql.pm
+%{perl_vendorarch}/Mysql
+%{perl_vendorarch}/Mysql.pm
+%dir %{perl_vendorarch}/auto/DBD/mysql
+%{perl_vendorarch}/auto/DBD/mysql/mysql.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/DBD/mysql/mysql.so
 %{_mandir}/man3/[DM]*
