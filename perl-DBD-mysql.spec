@@ -119,7 +119,7 @@ M(y)sql.pm та DBD::mSQL(mysql) реал╕зують два р╕зних п╕дходи до
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 # tests require access to a working mysql
