@@ -1,6 +1,7 @@
 #
 # Conditional build:
 %bcond_with	tests	# perform "make test"
+			# tests require access to a working mysql
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	DBD
@@ -121,9 +122,9 @@ M(y)sql.pm та DBD::mSQL(mysql) реал╕зують два р╕зних п╕дходи до
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
-%{__make} OPTIMIZE="%{rpmcflags}"
+%{__make} \
+	OPTIMIZE="%{rpmcflags}"
 
-# tests require access to a working mysql
 %{?with_tests:%{__make} test}
 
 %install
