@@ -22,7 +22,7 @@ Summary(sv):	Ett gränssnitt till MySQL för Perl
 Summary(uk):	Perl-¦ÎÔÅÒÆÅÊÓ ÄÏ MySQL
 Summary(zh_CN):	Perl µÄ MySQL ½çÃæ¡£
 Name:		perl-DBD-mysql
-Version:	2.1019
+Version:	2.1020
 Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
