@@ -25,7 +25,7 @@ Summary(uk):	Perl-╕нтерфейс до MySQL
 Summary(zh_CN):	Perl ╣д MySQL ╫ГцФ║ё
 Name:		perl-DBD-mysql
 Version:	2.9004
-Release:	2
+Release:	3
 # note: libmysqlclient infects everything that links against it with GPL
 License:	GPL (perl code also Artistic)
 Group:		Development/Languages/Perl
