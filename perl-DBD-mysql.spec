@@ -1,11 +1,11 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	DBD
 %define	pnam	mysql
-Summary:	DBD:mysql perl module
+Summary:	DBD::mysql perl module
 Summary(pl):	Modu³ perla DBD::mysql
 Name:		perl-DBD-mysql
 Version:	2.1011
-Release:	1
+Release:	2
 License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -42,5 +42,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc *.gz
-%{perl_sitearch}/*
-%{_mandir}/man3/*
+%{perl_sitearch}/DBD/mysql.pm
+%{perl_sitearch}/Mysql
+%{perl_sitearch}/Mysql.pm
+%dir %{perl_sitearch}/auto/DBD/mysql
+%{perl_sitearch}/auto/DBD/mysql/mysql.bs
+%attr(755,root,root) %{perl_sitearch}/auto/DBD/mysql/mysql.so
+%{_mandir}/man3/[DM]*
