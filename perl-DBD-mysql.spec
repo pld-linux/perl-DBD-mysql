@@ -25,7 +25,7 @@ Summary(zh_CN):	Perl µÄ MySQL ½çÃæ¡£
 Name:		perl-DBD-mysql
 Version:	2.9003
 Release:	2
-License:	GPL/Artistic
+License:	GPL (perl code also Artistic)
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	5506f687ff764013cacd7947b1169010
