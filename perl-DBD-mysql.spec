@@ -1,7 +1,7 @@
 #
 # Conditional build:
 %bcond_with	tests	# perform "make test"
-			# tests require access to a working mysql
+			# tests require access to a working MySQL
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	DBD
@@ -42,7 +42,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 M(y)sql.pm and DBD::mSQL(mysql) implement two different approaches to
-communicate with an mSQL or mysql server. DBD::mSQL(mysql) is built
+communicate with an mSQL or MySQL server. DBD::mSQL(mysql) is built
 upon the DBI, the generic Perl Database Interface. It brings you an
 identical interface to a broad variety of databases and is in this
 regard comparable to ODBC. The advantage of the DBI approach is
@@ -90,7 +90,7 @@ Uma implementaГЦo de DBI para o MySQL.
 
 %description -l ru
 M(y)sql.pm и DBD::mSQL(mysql) реализуют два разных подхода к общению с
-сервером mSQL или mysql. DBD::mSQL(mysql) построен на базе DBI,
+сервером mSQL или MySQL. DBD::mSQL(mysql) построен на базе DBI,
 стандартного Perl-интерфейса к базам данных. Он предоставляет
 единообразный интерфейс к самым разнообразным базам данных и сравним в
 этом отношении с ODBC. Преимуществами подхода DBI является легкая
@@ -105,7 +105,7 @@ En implementation av DBI fЖr MySQL.
 
 %description -l uk
 M(y)sql.pm та DBD::mSQL(mysql) реал╕зують два р╕зних п╕дходи до
-сп╕лкування з сервером mSQL або mysql. DBD::mSQL(mysql) побудовано на
+сп╕лкування з сервером mSQL або MySQL. DBD::mSQL(mysql) побудовано на
 баз╕ DBI, стандартного ╕нтерфейсу Perl до баз даних. В╕н нада╓
 ╕дентичний ╕нтерфейс до самих р╕зноман╕тних баз даних ╕ може бути
 пор╕вняний в цьому в╕дношенн╕ з ODBC. Перевагами п╕дходу DBI ╓ легка
