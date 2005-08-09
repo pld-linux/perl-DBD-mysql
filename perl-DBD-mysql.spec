@@ -121,6 +121,8 @@ M(y)sql.pm та DBD::mSQL(mysql) реал╕зують два р╕зних п╕дходи до
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
+# we don't need no bundles
+rm -rf lib/Bundle
 
 %build
 %{__perl} Makefile.PL \
@@ -136,13 +138,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT{\
-%{perl_archlib}/perllocal.pod,\
-%{perl_vendorarch}/Bundle/DBD/mysql.pm,\
-%{perl_vendorarch}/DBD/mysql/INSTALL.pod,\
-%{perl_vendorarch}/auto/DBD/mysql/.packlist,\
-%{_mandir}/man3/Bundle::DBD::mysql.3pm\
-}
+%{?perl_install_postclean}
+rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/%{pdir}/%{pnam}/INSTALL.pod
 
 %clean
 rm -rf $RPM_BUILD_ROOT
