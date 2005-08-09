@@ -24,13 +24,13 @@ Summary(sv):	Ett gränssnitt till MySQL för Perl
 Summary(uk):	Perl-¦ÎÔÅÒÆÅÊÓ ÄÏ MySQL
 Summary(zh_CN):	Perl µÄ MySQL ½çÃæ¡£
 Name:		perl-DBD-mysql
-Version:	3.0002
+Version:	3.0002_1
 Release:	0.1
 # note: libmysqlclient infects everything that links against it with GPL
 License:	GPL (perl code also Artistic)
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	df70ba084c97f5f7c2a997c3de2f0ad0
+Source0:	http://www.cpan.org/modules/by-module/%{pdir}/CAPTTOFU/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	9cda473643e587c39bbfec0350783747
 URL:		http://search.cpan.org/dist/DBD-mysql/
 BuildRequires:	mysql-devel
 BuildRequires:	perl-DBI >= 1.13
@@ -135,6 +135,14 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+rm -f $RPM_BUILD_ROOT{\
+%{perl_archlib}/perllocal.pod,\
+%{perl_vendorarch}/Bundle/DBD/mysql.pm,\
+%{perl_vendorarch}/DBD/mysql/INSTALL.pod,\
+%{perl_vendorarch}/auto/DBD/mysql/.packlist,\
+%{_mandir}/man3/Bundle::DBD::mysql.3pm\
+}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
