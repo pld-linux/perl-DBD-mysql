@@ -24,13 +24,13 @@ Summary(sv):	Ett grДnssnitt till MySQL fЖr Perl
 Summary(uk):	Perl-╕нтерфейс до MySQL
 Summary(zh_CN):	Perl ╣д MySQL ╫ГцФ║ё
 Name:		perl-DBD-mysql
-Version:	2.9008
+Version:	3.0002_1
 Release:	1
-# note: libmysqlclient infects everything that links against it with GPL
+# NOTE: libmysqlclient infects everything that links against it with GPL
 License:	GPL (perl code also Artistic)
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	8779f4eb6b56024ddcbdffeb674ad683
+# Source0-md5:	9cda473643e587c39bbfec0350783747
 URL:		http://search.cpan.org/dist/DBD-mysql/
 BuildRequires:	mysql-devel
 BuildRequires:	perl-DBI >= 1.13
@@ -121,6 +121,8 @@ M(y)sql.pm та DBD::mSQL(mysql) реал╕зують два р╕зних п╕дходи до
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
+# we don't need no bundles
+rm -rf lib/Bundle
 
 %build
 %{__perl} Makefile.PL \
@@ -133,8 +135,11 @@ M(y)sql.pm та DBD::mSQL(mysql) реал╕зують два р╕зних п╕дходи до
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
+%{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+%{?perl_install_postclean}
+rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/%{pdir}/%{pnam}/INSTALL.pod
 
 %clean
 rm -rf $RPM_BUILD_ROOT
