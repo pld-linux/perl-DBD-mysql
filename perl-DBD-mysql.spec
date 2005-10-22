@@ -26,10 +26,10 @@ Summary(zh_CN):	Perl µÄ MySQL ½çÃæ¡£
 Name:		perl-DBD-mysql
 Version:	3.0002_1
 Release:	0.1
-# note: libmysqlclient infects everything that links against it with GPL
+# NOTE: libmysqlclient infects everything that links against it with GPL
 License:	GPL (perl code also Artistic)
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/CAPTTOFU/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	9cda473643e587c39bbfec0350783747
 URL:		http://search.cpan.org/dist/DBD-mysql/
 BuildRequires:	mysql-devel
