@@ -7,22 +7,22 @@
 %define		pdir	DBD
 %define		pnam	mysql
 Summary:	A MySQL interface for Perl
-Summary(cs):	MySQL rozhranМ pro Perl
-Summary(da):	En MySQL-grФnseflade for Perl
-Summary(de):	Ein MySQL Interface fЭr Perl
-Summary(es):	Interfaz MySQL para Perl
-Summary(fr):	Interface MySQL pour Perl
-Summary(it):	Interfaccia MySQL per Perl
-Summary(ja):	Perl ╓н MySQL ╔╓╔С╔©║╪╔у╔╖╔╓╔╧
-Summary(ko):	фчю╩ ю╖гя MySQL юнемфДюл╫╨
-Summary(nb):	Et MySQL-grensesnitt for Perl
-Summary(pl):	DBD::mysql - perlowy interfejs do MySQL-a
-Summary(pt):	Uma interface de Perl para o MySQL
-Summary(pt_BR):	Uma interface de Perl para o MySQL
-Summary(ru):	Интерфейс MySQL для Perl
-Summary(sv):	Ett grДnssnitt till MySQL fЖr Perl
-Summary(uk):	Perl-╕нтерфейс до MySQL
-Summary(zh_CN):	Perl ╣д MySQL ╫ГцФ║ё
+Summary(cs.UTF-8):   MySQL rozhranц╜ pro Perl
+Summary(da.UTF-8):   En MySQL-grц╕nseflade for Perl
+Summary(de.UTF-8):   Ein MySQL Interface fц╪r Perl
+Summary(es.UTF-8):   Interfaz MySQL para Perl
+Summary(fr.UTF-8):   Interface MySQL pour Perl
+Summary(it.UTF-8):   Interfaccia MySQL per Perl
+Summary(ja.UTF-8):   Perl Ц│╝ MySQL Ц┌╓Ц┐ЁЦ┌©Ц┐╪Ц┐∙Ц┌╖Ц┌╓Ц┌╧
+Summary(ko.UTF-8):   М▌└Л²└ Л°└М∙° MySQL Л²╦М└╟М▌≤Л²╢Л┼╓
+Summary(nb.UTF-8):   Et MySQL-grensesnitt for Perl
+Summary(pl.UTF-8):   DBD::mysql - perlowy interfejs do MySQL-a
+Summary(pt.UTF-8):   Uma interface de Perl para o MySQL
+Summary(pt_BR.UTF-8):   Uma interface de Perl para o MySQL
+Summary(ru.UTF-8):   п≤п╫я┌п╣я─я└п╣п╧я│ MySQL п╢п╩я▐ Perl
+Summary(sv.UTF-8):   Ett grц╓nssnitt till MySQL fц╤r Perl
+Summary(uk.UTF-8):   Perl-я√п╫я┌п╣я─я└п╣п╧я│ п╢п╬ MySQL
+Summary(zh_CN.UTF-8):   Perl Г └ MySQL Г∙▄И²╒Ц─┌
 Name:		perl-DBD-mysql
 Version:	4.001
 Release:	1
@@ -53,71 +53,71 @@ draft of the DBI specification. As they have been circulating longer
 they are more mature and pretty stable. They're also more complete
 than DBD::mSQL and DBD::mysql.
 
-%description -l cs
+%description -l cs.UTF-8
 Implementace DBI pro MySQL do Perlu.
 
-%description -l da
+%description -l da.UTF-8
 En implementation af DBI for MySQL.
 
-%description -l de
-Eine Implementierung von DBI fЭr MySQL.
+%description -l de.UTF-8
+Eine Implementierung von DBI fц╪r MySQL.
 
-%description -l es
-ImplementaciСn del DBI para MySQL.
+%description -l es.UTF-8
+ImplementaciцЁn del DBI para MySQL.
 
-%description -l fr
+%description -l fr.UTF-8
 Mise en oeuvre de DBI pour MySQL.
 
-%description -l it
+%description -l it.UTF-8
 Implementazione di DBI per MySQL.
 
-%description -l ja
-MySQL мя DBI ╪баУ
+%description -l ja.UTF-8
+MySQL Г■╗ DBI Е╝÷Хё┘
 
-%description -l ko
-MySQLю╩ ю╖гя DBIюг ╫ггЖ.
+%description -l ko.UTF-8
+MySQLЛ²└ Л°└М∙° DBIЛ²≤ Л▀╓М≤└.
 
-%description -l nb
+%description -l nb.UTF-8
 En implementasjon av DBI for MySQL.
 
-%description -l pl
-Sterownik pozwalaj╠cy na dostЙp do baz MySQL z poziomu Perla.
+%description -l pl.UTF-8
+Sterownik pozwalajд┘cy na dostд≥p do baz MySQL z poziomu Perla.
 
-%description -l pt
-Uma implementaГЦo de DBI para o MySQL.
+%description -l pt.UTF-8
+Uma implementaц╖цёo de DBI para o MySQL.
 
-%description -l pt_BR
-Uma implementaГЦo de DBI para o MySQL.
+%description -l pt_BR.UTF-8
+Uma implementaц╖цёo de DBI para o MySQL.
 
-%description -l ru
-M(y)sql.pm и DBD::mSQL(mysql) реализуют два разных подхода к общению с
-сервером mSQL или MySQL. DBD::mSQL(mysql) построен на базе DBI,
-стандартного Perl-интерфейса к базам данных. Он предоставляет
-единообразный интерфейс к самым разнообразным базам данных и сравним в
-этом отношении с ODBC. Преимуществами подхода DBI является легкая
-портируемость и взаимодйествие. M(y)sql.pm - это более старые особи.
-Они были написаны до того, как стал доступным DBI, но основываются на
-ранних черновиках спецификации DBI. Так как они используются дольше,
-они более отлажены и стабильны. Также они более завершенные, чем
-DBD::mSQL и DBD::mysql.
+%description -l ru.UTF-8
+M(y)sql.pm п╦ DBD::mSQL(mysql) я─п╣п╟п╩п╦п╥я┐я▌я┌ п╢п╡п╟ я─п╟п╥п╫я▀я┘ п©п╬п╢я┘п╬п╢п╟ п╨ п╬п╠я┴п╣п╫п╦я▌ я│
+я│п╣я─п╡п╣я─п╬п╪ mSQL п╦п╩п╦ MySQL. DBD::mSQL(mysql) п©п╬я│я┌я─п╬п╣п╫ п╫п╟ п╠п╟п╥п╣ DBI,
+я│я┌п╟п╫п╢п╟я─я┌п╫п╬пЁп╬ Perl-п╦п╫я┌п╣я─я└п╣п╧я│п╟ п╨ п╠п╟п╥п╟п╪ п╢п╟п╫п╫я▀я┘. п·п╫ п©я─п╣п╢п╬я│я┌п╟п╡п╩я▐п╣я┌
+п╣п╢п╦п╫п╬п╬п╠я─п╟п╥п╫я▀п╧ п╦п╫я┌п╣я─я└п╣п╧я│ п╨ я│п╟п╪я▀п╪ я─п╟п╥п╫п╬п╬п╠я─п╟п╥п╫я▀п╪ п╠п╟п╥п╟п╪ п╢п╟п╫п╫я▀я┘ п╦ я│я─п╟п╡п╫п╦п╪ п╡
+я█я┌п╬п╪ п╬я┌п╫п╬я┬п╣п╫п╦п╦ я│ ODBC. п÷я─п╣п╦п╪я┐я┴п╣я│я┌п╡п╟п╪п╦ п©п╬п╢я┘п╬п╢п╟ DBI я▐п╡п╩я▐п╣я┌я│я▐ п╩п╣пЁп╨п╟я▐
+п©п╬я─я┌п╦я─я┐п╣п╪п╬я│я┌я▄ п╦ п╡п╥п╟п╦п╪п╬п╢п╧п╣я│я┌п╡п╦п╣. M(y)sql.pm - я█я┌п╬ п╠п╬п╩п╣п╣ я│я┌п╟я─я▀п╣ п╬я│п╬п╠п╦.
+п·п╫п╦ п╠я▀п╩п╦ п╫п╟п©п╦я│п╟п╫я▀ п╢п╬ я┌п╬пЁп╬, п╨п╟п╨ я│я┌п╟п╩ п╢п╬я│я┌я┐п©п╫я▀п╪ DBI, п╫п╬ п╬я│п╫п╬п╡я▀п╡п╟я▌я┌я│я▐ п╫п╟
+я─п╟п╫п╫п╦я┘ я┤п╣я─п╫п╬п╡п╦п╨п╟я┘ я│п©п╣я├п╦я└п╦п╨п╟я├п╦п╦ DBI. п╒п╟п╨ п╨п╟п╨ п╬п╫п╦ п╦я│п©п╬п╩я▄п╥я┐я▌я┌я│я▐ п╢п╬п╩я▄я┬п╣,
+п╬п╫п╦ п╠п╬п╩п╣п╣ п╬я┌п╩п╟п╤п╣п╫я▀ п╦ я│я┌п╟п╠п╦п╩я▄п╫я▀. п╒п╟п╨п╤п╣ п╬п╫п╦ п╠п╬п╩п╣п╣ п╥п╟п╡п╣я─я┬п╣п╫п╫я▀п╣, я┤п╣п╪
+DBD::mSQL п╦ DBD::mysql.
 
-%description -l sv
-En implementation av DBI fЖr MySQL.
+%description -l sv.UTF-8
+En implementation av DBI fц╤r MySQL.
 
-%description -l uk
-M(y)sql.pm та DBD::mSQL(mysql) реал╕зують два р╕зних п╕дходи до
-сп╕лкування з сервером mSQL або MySQL. DBD::mSQL(mysql) побудовано на
-баз╕ DBI, стандартного ╕нтерфейсу Perl до баз даних. В╕н нада╓
-╕дентичний ╕нтерфейс до самих р╕зноман╕тних баз даних ╕ може бути
-пор╕вняний в цьому в╕дношенн╕ з ODBC. Перевагами п╕дходу DBI ╓ легка
-переносим╕сть та вза╓мод╕я. M(y)sql.pm - це б╕льш стар╕ програми. Вони
-були написан╕ до того, як з'явився DBI, але базуються на ранн╕х
-проектах спецификац╕╖ DBI. Виходячи з того, що вони використовуються
-довше, вони б╕льш в╕длагоджен╕ та стаб╕льн╕. Також вони б╕льш
-завершен╕, н╕ж DBD::mSQL та DBD::mysql.
+%description -l uk.UTF-8
+M(y)sql.pm я┌п╟ DBD::mSQL(mysql) я─п╣п╟п╩я√п╥я┐я▌я┌я▄ п╢п╡п╟ я─я√п╥п╫п╦я┘ п©я√п╢я┘п╬п╢п╦ п╢п╬
+я│п©я√п╩п╨я┐п╡п╟п╫п╫я▐ п╥ я│п╣я─п╡п╣я─п╬п╪ mSQL п╟п╠п╬ MySQL. DBD::mSQL(mysql) п©п╬п╠я┐п╢п╬п╡п╟п╫п╬ п╫п╟
+п╠п╟п╥я√ DBI, я│я┌п╟п╫п╢п╟я─я┌п╫п╬пЁп╬ я√п╫я┌п╣я─я└п╣п╧я│я┐ Perl п╢п╬ п╠п╟п╥ п╢п╟п╫п╦я┘. п▓я√п╫ п╫п╟п╢п╟я■
+я√п╢п╣п╫я┌п╦я┤п╫п╦п╧ я√п╫я┌п╣я─я└п╣п╧я│ п╢п╬ я│п╟п╪п╦я┘ я─я√п╥п╫п╬п╪п╟п╫я√я┌п╫п╦я┘ п╠п╟п╥ п╢п╟п╫п╦я┘ я√ п╪п╬п╤п╣ п╠я┐я┌п╦
+п©п╬я─я√п╡п╫я▐п╫п╦п╧ п╡ я├я▄п╬п╪я┐ п╡я√п╢п╫п╬я┬п╣п╫п╫я√ п╥ ODBC. п÷п╣я─п╣п╡п╟пЁп╟п╪п╦ п©я√п╢я┘п╬п╢я┐ DBI я■ п╩п╣пЁп╨п╟
+п©п╣я─п╣п╫п╬я│п╦п╪я√я│я┌я▄ я┌п╟ п╡п╥п╟я■п╪п╬п╢я√я▐. M(y)sql.pm - я├п╣ п╠я√п╩я▄я┬ я│я┌п╟я─я√ п©я─п╬пЁя─п╟п╪п╦. п▓п╬п╫п╦
+п╠я┐п╩п╦ п╫п╟п©п╦я│п╟п╫я√ п╢п╬ я┌п╬пЁп╬, я▐п╨ п╥'я▐п╡п╦п╡я│я▐ DBI, п╟п╩п╣ п╠п╟п╥я┐я▌я┌я▄я│я▐ п╫п╟ я─п╟п╫п╫я√я┘
+п©я─п╬п╣п╨я┌п╟я┘ я│п©п╣я├п╦я└п╦п╨п╟я├я√я≈ DBI. п▓п╦я┘п╬п╢я▐я┤п╦ п╥ я┌п╬пЁп╬, я┴п╬ п╡п╬п╫п╦ п╡п╦п╨п╬я─п╦я│я┌п╬п╡я┐я▌я┌я▄я│я▐
+п╢п╬п╡я┬п╣, п╡п╬п╫п╦ п╠я√п╩я▄я┬ п╡я√п╢п╩п╟пЁп╬п╢п╤п╣п╫я√ я┌п╟ я│я┌п╟п╠я√п╩я▄п╫я√. п╒п╟п╨п╬п╤ п╡п╬п╫п╦ п╠я√п╩я▄я┬
+п╥п╟п╡п╣я─я┬п╣п╫я√, п╫я√п╤ DBD::mSQL я┌п╟ DBD::mysql.
 
-%description -l zh_CN
-р╩жж MySQL ╣д DBI й╣й╘╢Кй╘║ё
+%description -l zh_CN.UTF-8
+Д╦─Г╖█ MySQL Г └ DBI Е╝·Ф√╫Ф▌╙Ф√╫Ц─┌
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
