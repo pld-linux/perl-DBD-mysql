@@ -7,22 +7,22 @@
 %define		pdir	DBD
 %define		pnam	mysql
 Summary:	A MySQL interface for Perl
-Summary(cs.UTF-8):   MySQL rozhraní pro Perl
-Summary(da.UTF-8):   En MySQL-grænseflade for Perl
-Summary(de.UTF-8):   Ein MySQL Interface für Perl
-Summary(es.UTF-8):   Interfaz MySQL para Perl
-Summary(fr.UTF-8):   Interface MySQL pour Perl
-Summary(it.UTF-8):   Interfaccia MySQL per Perl
-Summary(ja.UTF-8):   Perl の MySQL インターフェイス
-Summary(ko.UTF-8):   펄을 위한 MySQL 인터페이스
-Summary(nb.UTF-8):   Et MySQL-grensesnitt for Perl
-Summary(pl.UTF-8):   DBD::mysql - perlowy interfejs do MySQL-a
-Summary(pt.UTF-8):   Uma interface de Perl para o MySQL
-Summary(pt_BR.UTF-8):   Uma interface de Perl para o MySQL
-Summary(ru.UTF-8):   Интерфейс MySQL для Perl
-Summary(sv.UTF-8):   Ett gränssnitt till MySQL för Perl
-Summary(uk.UTF-8):   Perl-інтерфейс до MySQL
-Summary(zh_CN.UTF-8):   Perl 的 MySQL 界面。
+Summary(cs.UTF-8):	MySQL rozhraní pro Perl
+Summary(da.UTF-8):	En MySQL-grænseflade for Perl
+Summary(de.UTF-8):	Ein MySQL Interface für Perl
+Summary(es.UTF-8):	Interfaz MySQL para Perl
+Summary(fr.UTF-8):	Interface MySQL pour Perl
+Summary(it.UTF-8):	Interfaccia MySQL per Perl
+Summary(ja.UTF-8):	Perl の MySQL インターフェイス
+Summary(ko.UTF-8):	펄을 위한 MySQL 인터페이스
+Summary(nb.UTF-8):	Et MySQL-grensesnitt for Perl
+Summary(pl.UTF-8):	DBD::mysql - perlowy interfejs do MySQL-a
+Summary(pt.UTF-8):	Uma interface de Perl para o MySQL
+Summary(pt_BR.UTF-8):	Uma interface de Perl para o MySQL
+Summary(ru.UTF-8):	Интерфейс MySQL для Perl
+Summary(sv.UTF-8):	Ett gränssnitt till MySQL för Perl
+Summary(uk.UTF-8):	Perl-інтерфейс до MySQL
+Summary(zh_CN.UTF-8):	Perl 的 MySQL 界面。
 Name:		perl-DBD-mysql
 Version:	4.001
 Release:	1
