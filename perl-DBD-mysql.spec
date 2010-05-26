@@ -29,7 +29,7 @@ Release:	1
 # NOTE: libmysqlclient infects everything that links against it with GPL
 License:	GPL (Perl code also Artistic)
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/DBD/CAPTTOFU/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	74f118a4984e6a49f8ece28e68caf543
 URL:		http://search.cpan.org/dist/DBD-mysql/
 BuildRequires:	mysql-devel >= 5.0.27
