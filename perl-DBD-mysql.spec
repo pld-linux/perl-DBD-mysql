@@ -24,13 +24,13 @@ Summary(sv.UTF-8):	Ett gränssnitt till MySQL för Perl
 Summary(uk.UTF-8):	Perl-інтерфейс до MySQL
 Summary(zh_CN.UTF-8):	Perl 的 MySQL 界面。
 Name:		perl-DBD-mysql
-Version:	4.017
+Version:	4.018
 Release:	1
 # NOTE: libmysqlclient infects everything that links against it with GPL
 License:	GPL (Perl code also Artistic)
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/DBD/CAPTTOFU/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	fc6f53e2a87bc5c32c44f10ee3f03683
+# Source0-md5:	d1d4ee2f20910d6491d1b6216471b2f1
 URL:		http://search.cpan.org/dist/DBD-mysql/
 BuildRequires:	mysql-devel >= 5.0.27
 BuildRequires:	perl-DBI >= 1.13
