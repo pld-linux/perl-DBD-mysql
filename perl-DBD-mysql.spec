@@ -2,10 +2,10 @@
 # Conditional build:
 %bcond_with	tests	# perform "make test"
 			# tests require access to a working MySQL
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pdir	DBD
 %define		pnam	mysql
+%include	/usr/lib/rpm/macros.perl
 Summary:	A MySQL interface for Perl
 Summary(cs.UTF-8):	MySQL rozhraní pro Perl
 Summary(da.UTF-8):	En MySQL-grænseflade for Perl
@@ -25,7 +25,7 @@ Summary(uk.UTF-8):	Perl-інтерфейс до MySQL
 Summary(zh_CN.UTF-8):	Perl 的 MySQL 界面。
 Name:		perl-DBD-mysql
 Version:	4.018
-Release:	2
+Release:	3
 # NOTE: libmysqlclient infects everything that links against it with GPL
 License:	GPL (Perl code also Artistic)
 Group:		Development/Languages/Perl
