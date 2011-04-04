@@ -25,12 +25,13 @@ Summary(uk.UTF-8):	Perl-інтерфейс до MySQL
 Summary(zh_CN.UTF-8):	Perl 的 MySQL 界面。
 Name:		perl-DBD-mysql
 Version:	4.018
-Release:	4
+Release:	5
 # NOTE: libmysqlclient infects everything that links against it with GPL
 License:	GPL (Perl code also Artistic)
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/DBD/CAPTTOFU/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	d1d4ee2f20910d6491d1b6216471b2f1
+Patch0:		headers.patch
 URL:		http://search.cpan.org/dist/DBD-mysql/
 BuildRequires:	mysql-devel >= 5.0.27
 BuildRequires:	perl-DBI >= 1.13
@@ -121,15 +122,17 @@ M(y)sql.pm та DBD::mSQL(mysql) реалізують два різних під
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
+%patch0 -p1
 # we don't need no bundles
 rm -rf lib/Bundle
 
 %build
 %{__perl} Makefile.PL \
+	--cflags="$(mysql_config --cflags) %{rpmcflags} -Werror=implicit-function-declaration" \
 	INSTALLDIRS=vendor
+
 %{__make} \
 	CC="%{__cc}" \
-	OPTIMIZE="%{rpmcflags}"
 
 %{?with_tests:%{__make} test}
 
