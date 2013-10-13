@@ -29,7 +29,7 @@ Release:	1
 # NOTE: libmysqlclient infects everything that links against it with GPL
 License:	GPL (Perl code also Artistic)
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/DBD/CAPTTOFU/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/DBD/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	280922d577aa95bf3f9ae21bd75e08c4
 Patch0:		headers.patch
 URL:		http://search.cpan.org/dist/DBD-mysql/
@@ -124,7 +124,7 @@ M(y)sql.pm та DBD::mSQL(mysql) реалізують два різних під
 %setup -q -n %{pdir}-%{pnam}-%{version}
 %patch0 -p1
 # we don't need no bundles
-rm -rf lib/Bundle
+%{__rm} -r lib/Bundle
 
 %build
 %{__perl} Makefile.PL \
@@ -143,7 +143,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 %{?perl_install_postclean}
-rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/%{pdir}/%{pnam}/INSTALL.pod
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorarch}/DBD/mysql/INSTALL.pod
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -157,4 +157,4 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/auto/DBD/mysql
 %{perl_vendorarch}/auto/DBD/mysql/mysql.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/DBD/mysql/mysql.so
-%{_mandir}/man3/[DM]*
+%{_mandir}/man3/DBD::mysql*.3pm*
