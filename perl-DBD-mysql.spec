@@ -155,6 +155,5 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/DBD/mysql
 %{perl_vendorarch}/DBD/mysql/GetInfo.pm
 %dir %{perl_vendorarch}/auto/DBD/mysql
-%{perl_vendorarch}/auto/DBD/mysql/mysql.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/DBD/mysql/mysql.so
 %{_mandir}/man3/DBD::mysql*.3pm*
