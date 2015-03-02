@@ -35,8 +35,13 @@ Patch0:		headers.patch
 URL:		http://search.cpan.org/dist/DBD-mysql/
 BuildRequires:	mysql-devel >= 5.0.27
 BuildRequires:	perl-DBI >= 1.13
-BuildRequires:	perl-devel >= 1:5.8.0
+%if %{with tests}
+BuildRequires:	perl-Test-Deep
+BuildRequires:	perl-Test-Simple
+%endif
+BuildRequires:	perl-devel >= 1:5.8.1
 BuildRequires:	rpm-perlprov >= 4.1-13
+Requires:	perl-DBI >= 1.13
 Obsoletes:	perl-DBD-MySQL
 Obsoletes:	perl-DBD-Mysql
 Obsoletes:	perl-Msql-Mysql-modules
@@ -144,6 +149,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{?perl_install_postclean}
 %{__rm} $RPM_BUILD_ROOT%{perl_vendorarch}/DBD/mysql/INSTALL.pod
+%{__rm} $RPM_BUILD_ROOT%{perl_vendorarch}/DBD/README.pod
+%{__rm} $RPM_BUILD_ROOT%{_mandir}/man3/DBD::README.3pm
 
 %clean
 rm -rf $RPM_BUILD_ROOT
