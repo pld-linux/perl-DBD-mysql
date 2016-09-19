@@ -1,14 +1,15 @@
---- DBD-mysql-4.020/dbdimp.h~	2011-08-20 20:35:59.000000000 +0200
-+++ DBD-mysql-4.020/dbdimp.h	2011-10-07 15:37:51.615157851 +0200
-@@ -23,6 +23,8 @@
- #include <mysqld_error.h>  /* Comes MySQL */
- 
+--- DBD-mysql-4.036/dbdimp.h~	2016-09-19 18:58:49.000000000 +0300
++++ DBD-mysql-4.036/dbdimp.h	2016-09-19 18:59:57.509789300 +0300
+@@ -24,6 +24,9 @@
  #include <errmsg.h> /* Comes with MySQL-devel */
+ #include <stdint.h> /* For int32_t */
+ 
 +#define is_prefix mysql_is_prefix      /* namespace sanity */
 +extern int is_prefix(const char *, const char *);
- 
++
  /* For now, we hardcode this, but in the future,
   * we can detect capabilities of the MySQL libraries
+  * we're talking to */
 @@ -353,6 +355,9 @@
  
  extern int mysql_db_reconnect(SV*);

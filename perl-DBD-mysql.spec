@@ -24,13 +24,13 @@ Summary(sv.UTF-8):	Ett gränssnitt till MySQL för Perl
 Summary(uk.UTF-8):	Perl-інтерфейс до MySQL
 Summary(zh_CN.UTF-8):	Perl 的 MySQL 界面。
 Name:		perl-DBD-mysql
-Version:	4.032
-Release:	2
+Version:	4.036
+Release:	1
 # NOTE: libmysqlclient infects everything that links against it with GPL
 License:	GPL (Perl code also Artistic)
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/DBD/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	cc5436d4cadd0d6f3d19faae5ffdfe83
+# Source0-md5:	fdee1d8dc4ae54bc6cb7cd5a3f3d3342
 Patch0:		headers.patch
 URL:		http://search.cpan.org/dist/DBD-mysql/
 BuildRequires:	mysql-devel >= 5.0.27
@@ -143,24 +143,22 @@ M(y)sql.pm та DBD::mSQL(mysql) реалізують два різних під
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 %{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 %{?perl_install_postclean}
 %{__rm} $RPM_BUILD_ROOT%{perl_vendorarch}/DBD/mysql/INSTALL.pod
-%{__rm} $RPM_BUILD_ROOT%{perl_vendorarch}/DBD/README.pod
-%{__rm} $RPM_BUILD_ROOT%{_mandir}/man3/DBD::README.3pm
+%{__rm} $RPM_BUILD_ROOT%{_mandir}/man3/DBD::mysql::INSTALL.3pm
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog README.pod TODO
+%doc README.md Changes
 %{perl_vendorarch}/DBD/mysql.pm
 %dir %{perl_vendorarch}/DBD/mysql
 %{perl_vendorarch}/DBD/mysql/GetInfo.pm
 %dir %{perl_vendorarch}/auto/DBD/mysql
 %attr(755,root,root) %{perl_vendorarch}/auto/DBD/mysql/mysql.so
-%{_mandir}/man3/DBD::mysql*.3pm*
+%{_mandir}/man3/DBD::mysql.3pm*
