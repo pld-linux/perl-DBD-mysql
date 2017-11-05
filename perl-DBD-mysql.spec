@@ -31,6 +31,7 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/DBD/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	29b1f61321d0892885ccfd0e7bc07f7f
 Patch0:		headers.patch
+Patch1:		fix_type_conversions.patch
 URL:		http://search.cpan.org/dist/DBD-mysql/
 BuildRequires:	mysql-devel >= 5.0.27
 BuildRequires:	perl-DBI >= 1.13
@@ -128,6 +129,7 @@ M(y)sql.pm та DBD::mSQL(mysql) реалізують два різних під
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
 %patch0 -p1
+%patch1 -p1
 # we don't need no bundles
 %{__rm} -r lib/Bundle
 
