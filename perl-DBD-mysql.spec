@@ -5,7 +5,6 @@
 
 %define		pdir	DBD
 %define		pnam	mysql
-%include	/usr/lib/rpm/macros.perl
 Summary:	A MySQL interface for Perl
 Summary(cs.UTF-8):	MySQL rozhraní pro Perl
 Summary(da.UTF-8):	En MySQL-grænseflade for Perl
