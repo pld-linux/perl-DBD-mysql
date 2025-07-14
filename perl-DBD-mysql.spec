@@ -127,7 +127,7 @@ M(y)sql.pm та DBD::mSQL(mysql) реалізують два різних під
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-%patch0 -p1
+%patch -P0 -p1
 # we don't need no bundles
 %{__rm} -r lib/Bundle
 
