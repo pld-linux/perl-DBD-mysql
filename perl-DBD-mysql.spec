@@ -28,9 +28,9 @@ Release:	1
 # NOTE: libmysqlclient infects everything that links against it with GPL
 License:	GPL (Perl code also Artistic)
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/DBD/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	https://www.cpan.org/modules/by-module/DBD/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	c8a0d4044e76ea8878cd6e9251bd3cac
-URL:		http://search.cpan.org/dist/DBD-mysql/
+URL:		https://metacpan.org/dist/DBD-mysql
 BuildRequires:	mysql-devel >= 8
 BuildRequires:	perl-DBI >= 1.13
 BuildRequires:	perl-Devel-CheckLib
@@ -40,6 +40,7 @@ BuildRequires:	perl-Test-Simple
 %endif
 BuildRequires:	perl-devel >= 1:5.8.1
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 Requires:	perl-DBI >= 1.13
 Obsoletes:	perl-DBD-MySQL
 Obsoletes:	perl-DBD-Mysql
