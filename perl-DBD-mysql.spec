@@ -43,8 +43,8 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.745
 Requires:	perl-DBI >= 1.13
 Obsoletes:	perl-DBD-MySQL
-Obsoletes:	perl-DBD-Mysql
-Obsoletes:	perl-Msql-Mysql-modules
+Obsoletes:	perl-DBD-Mysql < 2
+Obsoletes:	perl-Msql-Mysql-modules < 2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
