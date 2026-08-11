@@ -24,7 +24,7 @@ Summary(uk.UTF-8):	Perl-інтерфейс до MySQL
 Summary(zh_CN.UTF-8):	Perl 的 MySQL 界面。
 Name:		perl-DBD-mysql
 Version:	5.013
-Release:	1
+Release:	2
 # NOTE: libmysqlclient infects everything that links against it with GPL
 License:	GPL v2+ (Perl code also GPL v1+ or Artistic)
 Group:		Development/Languages/Perl
