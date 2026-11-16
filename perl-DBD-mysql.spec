@@ -32,17 +32,18 @@ Source0:	https://www.cpan.org/modules/by-module/DBD/DVEEDEN/%{pdir}-%{pnam}-%{ve
 # Source0-md5:	ffed3a9deb1d4cbaad29bd3ced0d0162
 URL:		https://metacpan.org/dist/DBD-mysql
 BuildRequires:	mysql8.0-devel
-BuildRequires:	perl-DBI >= 1.609
+BuildRequires:	perl-DBI >= 1.614
 BuildRequires:	perl-Devel-CheckLib >= 1.09
-BuildRequires:	perl-ExtUtils-MakeMaker
+BuildRequires:	perl-ExtUtils-MakeMaker >= 6.58
 %if %{with tests}
-BuildRequires:	perl-Test-Deep
 BuildRequires:	perl-Test-Simple >= 0.90
+BuildRequires:	perl-Time-HiRes
+BuildRequires:	perl-version
 %endif
 BuildRequires:	perl-devel >= 1:5.8.1
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.745
-Requires:	perl-DBI >= 1.609
+Requires:	perl-DBI >= 1.614
 Obsoletes:	perl-DBD-MySQL
 Obsoletes:	perl-DBD-Mysql < 2
 Obsoletes:	perl-Msql-Mysql-modules < 2
@@ -159,5 +160,5 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/DBD/mysql
 %{perl_vendorarch}/DBD/mysql/GetInfo.pm
 %dir %{perl_vendorarch}/auto/DBD/mysql
-%attr(755,root,root) %{perl_vendorarch}/auto/DBD/mysql/mysql.so
+%{perl_vendorarch}/auto/DBD/mysql/mysql.so
 %{_mandir}/man3/DBD::mysql.3pm*
